@@ -4,7 +4,6 @@ POKY_BBLAYERS_CONF_VERSION = "2"
 BBPATH = "${TOPDIR}"
 BBFILES ?= ""
 
-# ##OEROOT##는 나중에 자동으로 현재 경로로 바뀝니다.
 BBLAYERS ?= " \
   ##OEROOT##/poky/meta \
   ##OEROOT##/poky/meta-poky \

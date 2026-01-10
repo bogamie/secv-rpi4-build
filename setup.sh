@@ -7,10 +7,10 @@ source poky/oe-init-build-env build
 echo "Configuring bblayers.conf and local.conf..."
 
 if [ -f "$PROJECT_ROOT/configurations/rpi4/local.conf.sample" ]; then
-    cp "$PROJECT_ROOT/configurations/rpi4/local.conf.sample" conf/local.conf
-    cp "$PROJECT_ROOT/configurations/rpi4/bblayers.conf.sample" conf/bblayers.conf
+    cp "$PROJECT_ROOT/configurations/rpi4/local.conf.sample" "$PROJECT_ROOT/build/conf/local.conf"
+    cp "$PROJECT_ROOT/configurations/rpi4/bblayers.conf.sample" "$PROJECT_ROOT/build/conf/bblayers.conf"
     
-    sed -i "s|##OEROOT##|$PROJECT_ROOT|g" conf/bblayers.conf
+    sed -i "s|##OEROOT##|$PROJECT_ROOT|g" "$PROJECT_ROOT/build/conf/bblayers.conf"
 
     echo "=================================================="
     echo " 아래 명령어로 빌드하세요."
