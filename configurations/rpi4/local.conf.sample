@@ -273,6 +273,8 @@ PACKAGECONFIG:append:pn-qemu-system-native = " sdl"
 MACHINE_FEATURES:append = " optee"
 INIT_MANAGER = "systemd"
 EXTRA_IMAGE_FEATURES += "ssh-server-openssh"
+LICENSE_FLAGS_ACCEPTED = "synaptics-killswitch"
+DISTRO_FEATURES:append = " security"
 
 # CONF_VERSION is increased each time build/conf/ changes incompatibly and is used to
 # track the version of this file when it was generated. This can safely be ignored if
