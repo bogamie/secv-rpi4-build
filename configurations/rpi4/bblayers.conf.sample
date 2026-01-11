@@ -15,4 +15,5 @@ BBLAYERS ?= " \
   ##OEROOT##/meta-arm/meta-arm \
   ##OEROOT##/meta-raspberrypi \
   ##OEROOT##/meta-security \
+  ##OEROOT##/meta-security/meta-tpm \
   "

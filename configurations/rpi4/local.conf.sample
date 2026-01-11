@@ -275,6 +275,9 @@ INIT_MANAGER = "systemd"
 EXTRA_IMAGE_FEATURES += "ssh-server-openssh"
 LICENSE_FLAGS_ACCEPTED = "synaptics-killswitch"
 DISTRO_FEATURES:append = " security"
+IMAGE_INSTALL:append = " optee-ftpm"
+IMAGE_INSTALL:append = " tpm2-tools libtss2 tpm2-abrmd"
+KERNEL_MODULE_AUTOLOAD += "tpm_ftpm_tee"
 
 # CONF_VERSION is increased each time build/conf/ changes incompatibly and is used to
 # track the version of this file when it was generated. This can safely be ignored if
